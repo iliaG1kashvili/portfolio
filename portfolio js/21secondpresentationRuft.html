@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruft Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEX////MzMzJycny8vLU1NTR0dH8/Pzm5ubg4ODOzs76+vrd3d3w8PDY2Nj39/fh4eHq6uoWPclrAAAOUklEQVR4nN1d2brjIAg+zb6avP/TTtMlgisopu1wdb6ZxvgHZBPx7+//o65Ty7732zCva9N8ejaSdMe1zU073qon3Q76LxBO9YFs1KggrZ+eXSapfWhuTmS/j7Cr+7UNYnvS/OmJJtG0DG0c25OGT0+WTWpfRyq6O1X9pyfMom6ZRzq4J8L905OmU903THQ/hXCZGZJ5x6X/Wj49dQot642E7mXn23Xu1/Pf6k/PPkbdvsaZ90DWrkO/qO752PZ+plKfnX+M6jkG7w5tXLe9nvCD8/n/3WdmTqJpG4PwDr7NvYntSaeU3r4X4R7UnAfn9sASa98/HK+bMYvU4Ncth1zOe2R5nU+310yYSYtfudwFc1jigtedz3+j4937Vt+deWuMdy9S5xBf53grn/I8RJNuvOvTWHyZW1p7xPMOb2PZtf1E+FVOW93IwPuDBv+LXBofvnFImKQ2+E5r+Qly47urljQeNOcIwvNMJbU68Y19qkMyvsf4DoPfzQ58yex7jPhd5nBz4Utn30HaWHxBlqZ3uWe5On7/HnNYe/yXTG9SG4uCEX43TVNM0DqnghGAqCN8cWMx1fuwvvLrTxqbddgX54v6UPSXBfFUpbecUUw6srTu/PozeWIGPHVr/RL9QwbETj52mvY5nqV9hHVvwXVYiGpWyOynz046slB9S070VVXzALlYGrRaDxbLQBRVpRMD3hvkulgMrNqXeReBqL3SbFW6pGShbzb/Rm3/JCCeSZrcRJs3GOcCRrLU5kM8R8jySqdoJpOKbzU+dDYXlYRX2hHw0RLxo+1f50IUUDQBfE/b16zrPA/zUQrh2V0PziETYr6icTrLD3S3dduVubqnetnWmwtltXqcqjyIuYrG7SwfCfZgpk8ts/WMP4LIgdjlKRqns3zY8aiLO7XGQ6aGQZQBcclSNLuN7+2mkN8bZeCD0iHq0IkfZToYWI0bKUAx4ogwAx+UDFEvQ/bWYW3zryVqK+PTkL5uqunXj9GfedJgO8vEXNGElVPV0uLSNC4mL8PODOeewQDvnc8HySFNEsQt0d6bEnoGA3EylyDDDKdA1MuQlY00Z3mjqyks3FXDssJ8iNoastLdc6qcmTqGnb9kQ9yTliHeU3A5y9RH+RaKC3FNeJehYzhsmMYbopTaFiZELaTklxmz5DBQYdlOrEdmQTzz+XSn1Jhl3BdxvY3Le0wciHoThKorFJ4lx8QsuUvwJAZEbSuIRsngICeiNABm7TaTIU5cW4E5OHI2AXAUMmbWz1Eh9kxbgTjIUxQIYNVmF5cRIWohJS2KDgFk+bHIB+I96iESRCCklG/aQTPBcWNMgDKbBxSI+r0kgYNZB56qxyIqtdFMgKiFlKL0oUNZbZypYICsR4MUhahYQjokA0RmQnQjPQZx4wgp5ANPzjBA2bKyCMSR8VpoCHmaoi4IMAJRvzq+fQ/tBE/XY4DylRAhiDrlHBfSBgzDMvSqMMAgRM3CqOhALcNKxmIfoUxppxeiVh1Rn3RPVqNjeYB+iNp+RxVHnaruoXAXLM51QwTGMB7HJEJEPkLJgjInRL20KNF9EsTtKoBuiBXv3QkQ032EBLIhAj1DC9XYEOEDVBOqlr3v96VOiB4tiFrPUO03EyLyESgmtN5aUN7HOErxIgNizdEz7ymwILbofTHqNvM4b3WbmYkOBLHRZ9UYW9sciDDtP0aFbnAWZ3jrFjzkOb3AsVJ0iEjLxHhhV+2RJQWTGyJrCCpEpGViK8pVmH8+nLEz9RqBqcVpEJGWiQiJtdFqEms12hDZZc8kiMBZi8WS3WhOyZoiK3VsQeSn9QgQodjF7EQUILeCwoCYklqPQlwYarS5YaqcRW8ZazFpeysCsWOoUXw6prqt/VLX9VEjjhDypgkhJu6OhCECUx/TMnigBihdNTNsr0na2CeXTYcgArZEFTUqbDOMioI6lqcQdaI7PW3ih1gztAxwC1x2D7KRoxHBMsk4XeGFCLkSUxBaj7pjD7DZwWHiIMDCPy9EENVHFznQuR5ua4lnpGgnERb+eSBCuYtmrIBC8HEbGBPyxPSwuclLB8SOsQhhrZJX5Sq+wCkpFv650vWAK/HMgeZ3IIDTWWuqmGq2C5xLN7kIZTT+yXUBfcBqKspngAQWt8RGswER/E344rQCem6ZPdDPIr2EMET9J+WDnz8PLpdT9dNkDhgYoQ4fuMqJswK0oglOhdfPYkqzoEEyK+4fg1PC6nOFhc1KzUIILIXcXrqDiySloBEG3WpW1xXwuSWbQ1hcpC3xEgiBmhHdBjK4SJQPopQuDCkFYY1wn1nMRaLhInaq0JomamGBNyPedQ5CJHsStG4jM33SOtoUKrqCtCYM3pDmrutFYuPBwjLqHMgEVyI5a7RRFqKWjtjKgjIqv9vcpgwORNv/VTSjY/oLZETk21n3aTqMINn6K8SWd19QzcCokDW4jox80we7AxENDWVUfj9dZ4x4uyCwmMjtRDbkaQMZle+LqJJ1GAiYnRAb8shzSRmFloKpw5AzZBn0qSVLHrLH4pVlYJps+YAZ0WrGGhXVTYdXYYd8KvFmXjl5EVz1dhtOAZtwh43IyHh7R7qLbl5exDgmdDQo6PttNfq/RGyh0fxM2t6DgCUlqLZaszk21yK1KlaAKiumwCSnebuhTfwXhZd3Z/1eVkzb7HFjEKuI/mrtJyS1KWBhcl7E1UMQTDcic64PJBk7gVWYPkgdaFwT82UcTStE21sCFuY4g85Wl49Rm4iDgrSMDiXl+uqBNZA3UO1qoBXvQIFKBhbBhl7nvGRY+CA1o5Y8Rx/r+DxhycAAUjpixazAc5YYru7XV3/FW7MRmpCjIusGhgBSIfAkyEI9qFLRDpkvssofZT/4H9qD/sR1A9A1f4ZMOuUhpGrgGrieUH3n0xXV+1Qyqmb5KAtRfefLxEv3XQeR7/W9edFRurfbo/c4RDaeJviOqyEid/t0XPWURMKL5JNCAoSLUvUaETYXH4SIzospx78L5ds+BhGdKYdqU6czhN70IYit96262Y7Uuz4CERXIYqU5iyP8BEQE0HA1StxadTnExmUI31TkXq6LIbYhgMBtk/SyLoWIlIxt9ArdrXYdxA7l1Rw2r4CmedBVELEn4zLq8tbiRddARE3U3FnUYggvgYgbOLndMnGfRlN5iPgNHr9T2i/1T0Ae4k4BqLMOJS4EKgtxIwEklqymUkmIqCGof7NNOMb3jy8OEZ23C2zVFL8frxBEhcxgaJuSWROeQEUgGt0WQ/Inni+1qQBE4wxmcMzzZwVvj5OG2Bk9eYOZXvl9CxfJQlTGOejw8toLq9IXSUI0NnhjvUS1V1r29nQ5iHhnON4fRe8BF95lEIKojNb7UTdFZ7yLX1MpAtGQUMIwe1mfDZEARPNyCIIJ19aw7DJ8UC5E4+aaitJ0GBxJvWKzLw+iWYpHioX2S6yhpgyIqmUvwYOatLelUzJEswiMuKpA2cRVlzanQbQYSO0xxOo2G6Ku3od5Xdd52GNN1VIgWgwk+1+cbrN+Wh43bz4ncfzRDkEJ4vewsy7/Isd5EmUTRlnWC+Y4BBQ5E6JZv8fpgsVvsGeSWj3X3VWhG4I4EHezBpOjnlIa7GEKFvIGCobIEJXZwapqOSdDkhrsAfJ3jHvNxr9eiBDtu7FYIR5gYZKesV7vwOidEAWiJaA3FgPRmQ8etCf5r8qGc/cu8ChE11XOzMu18qrNYy3x3mPH87TOuSvnB+RBzDswYGmAh0V0dFVLguiv8GZABM1mE4okjUxC1fT10+2b6t6ozeYLardxb1x1EniIz0K85VMZdzcq3HbUPyk3xC2ooskQ55xViI69uTIlWMr81taG6OJfNSRAhEOzAWIZdU9/QXMkzeM+d9f9z0fH2QRvPasXBjw+7L3cB9YPkL0bB75xcXyJ+ByBsU7Y+AWnDUJBFzz1QPRRLXwnGCZE8PMEjxRUAYebdAIuBhJ5AYjV0Ll/FoMIBCjldCA4bRD+PMTeRT6IRstnDkR4GpwO7CQSZx5EPKTnhGif3qJDhI0UEpKknL70xOjFhlg1DvGgQoRNk1Ly3HrW8adBOpae2PDgM3/mhQhPC6SEhWDShFBG18yFXUN8nUBeWAnNVEpkz8shk7v/vedeVcG2+QSIsKV20pYo8wpWcve/x9yrsc/NRRpH8xKImZ6jV3rUFen67ghE5FAmJRBrlpCyuo4pgStD0CVwaem1gT7jB+n2a2JH9QIQ0Q02iUluva5oSaESVXNeiAhgYuEFf1P8fECw8tEDEYlo6usWNktKIHRDREomuVZ2Yy7DQghdEFFyLr3sgl0EV6p61YKIkn/xG2y8xF6GBXTpkzDEDbcySd/uVWyZ43Th5JGvV3EWQFAER83pFaxe9SYHcjbsdahAnS+3KzWH3BBZl4JbxJ4vu7M4i1wQM5TMQTfufKnxYSJZEGO9lWLEVjSgmqVMUZmZHMg1ugtX0eTuMscJa9Rsm3vmsIgcAbm2Yk1AYO43v66L0Z74IJgvle88+aaa+dmDpFUp6ecgJVTiSNWbXhAppZhROnlC0Vgdbd9CgA6IzMv0PERsJv56LdQAhVvx1JXQGxhnwIyNeJHXB2gRcnrJZ8CUsc1f6kCVOG0kL7rbzYv4ih5VESVtLLzOrTIrMQT8jAtJB/jO/56O2/scu0gXzzKH/LcWdHW/2mWmPwdQRxZw1mp5Nv1zoLtJeIpXkpFUmur90bvYX79052qhg7eFCJxUnJvReTGogW/+RFfBDArWhbjwXXXAQYycnWt9+Mbtx/h3EBkhqYvqN1JPQXj0T/8t9QJoiKOr2u1nfFAHzWFwxBa430xrANywF41xLyLXXdl307jXP2cVfNSeuKpqbNe5X4i1BT9DY9us89DvS/2/IXvRP3ghbO2/veDLAAAAAElFTkSuQmCC">
+    <link rel="stylesheet" href="21secondpresentationRuft.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <nav class="nav1 d-none d-lg-flex">
+        <div class="nav1item1 col-lg-3 col-xl-2"><img src="data:image/webp;base64,UklGRrIEAABXRUJQVlA4TKUEAAAvdkAMEO/GoJEkRSXgTb1/O0w7z2+BQdtIjgzgIB1/RPe9RHHbthF7/bv/qklr2JFsq1bOc8Mh/x+yIANCcHeH63svUZu2AYNnp7yBkmIYhiEEAAH4SsaYYoHdpEWHKgGEraTCf7LGLClAMsc8KQAEgwgQgmBUSBANAKPDLxKBhDAg0aAG0KEHYBgBIxEIEAIBCIYgCIRhGAZhGIJAAEbCAASQANOYYI4qyWRGjjBNFvhCJPvYSwrmGOM7jQJiABEwDIEQjAo1cD+CkRA69BD+EQAAggCMX/QgEgAhJDoM9w0AhJEQiDjX3Ydu71VQf3Yw2b/0VZrl/q/b+68rb/XnbXv//3y/s+F4V/uf727VZzvvgJ8f9u+c1u+4GaPCA2p0+MI7fmGcoMaLg/62f2ZzKV3btm3bPl7btm0bB2u7Z22ryZv0bYqs/dfMJJmk6e8zn/T7/Ub0fwI8k/tsNssRvFF70NYzpogI03ikHLHjcVNS6x15dOy27pTM6+02IvbbfEpuphFwyDZHTjFYb3NI1e184hTDFpW210ZSIO9VWQdsNU0KrbeylXT49sdI4XZ8ePXsuraUElwx+24qpa33rZQzp5dnvMYwxUFLxOcszUtPK8tayzaGaKIl0hGRKAvReSeU4fiVGnWuxA8mVDiHMIqTItotkU7UEhHORHTWUUXNWm2B2sBgHLS0cRciIpG5pCUiPV9DcdDOQBedUcyay9TaPECiiQGEIiK+MauJFDXKQnTB6VNEpm08M88m264vJy3XSDXVBcCKtE05xXLoB9YA0fnHbrind+AO62Q5eRcPh65SZywCvhKYijQAYIY+++ZHANh9y6M1vN1hHoB/SxIpPsAMHlgAzGCynCFGAu4oIRLORvTldz8BwME7bTBl6hb7Q/1j4XL1RGvhRBsDbUn3JWOSg+ir76Hdew+of/2/YKMkTgmBXgqcxgIJR0qcMLNVQiSMXPT51z8o2n9+XbSRvQgWtQ8gSkGUAmgsAGgiAAaIvvg25fclGnmLCJU2AEymxaW75XnN3/818pua7NlARKTjqTbNluzaOdD/2SiNPkwwNNfMp08ffhOpv5WnCwQiIvGQXPkEXnrkFahP3gbglxXKNFCkPxwfP/gGtC/eSVcAuIPOXqo88JVwOIiumu0Br9//UZOu9oDriOjUxUoTKTIsRMDcK4mIrvPw1vtNIrp45YVKEmsGQ3RrM+W5pv7c5cvR08TZOuW6Ju3xFKKfly4Da8K0GECojJV2hn7KeJDjmZso7YEMRKsvUhx8RcDcU0LAiRopE0pHSZQJ9MXmeJf0N3i4KxNduKIR7kcav8dAWxNI5CniopY+Bli0kwmAQLS+lyP9xlfvfScb0TlLGuiKiO+ciIRAEigSeugpIpNWRHyRXi3iO+dEJAEGTnFk6vLLmgZPWTxX7n7MdgDVMvcSsGMYdTE7AO+ZMXzJqgWV/dmby4NxpQCzrykHz0blvvnQJ8VxbVHFL989vxi5m1HVT91YBAuq/LErTIlDxb9234cm3LhG9b9we747nDca512frZ6Hkfn2o5eljW2NUfrqPe8o1r2KUfv0rR8IWVQ8AA==" alt=""></div>
+        <div class="nav1item2 col-lg-6 col-xl-4">
+            <ul>
+                <li>HOME</li>
+                <li>CATEGORY</li>
+                <li>ARCHIVE</li>
+                <li class="pages">PAGES 
+                    <div class="pagesitems">
+                        
+                        <div class="pagesitem1"><h5>Elements</h5></div>
+                    </div>
+                </li>
+                <li class="blog">BLOG
+                    <div class="pagesitems">
+                        
+                        <div class="pagesitem1"><h5>Blog Details</h5></div>
+                    </div>
+                </li>
+                <li>CONTACT</li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar d-lg-none navbar-light  fixed-top nav2">
+        <div class="container-fluid">
+          <div class="nav2item1"><img src="data:image/webp;base64,UklGRrIEAABXRUJQVlA4TKUEAAAvdkAMEO/GoJEkRSXgTb1/O0w7z2+BQdtIjgzgIB1/RPe9RHHbthF7/bv/qklr2JFsq1bOc8Mh/x+yIANCcHeH63svUZu2AYNnp7yBkmIYhiEEAAH4SsaYYoHdpEWHKgGEraTCf7LGLClAMsc8KQAEgwgQgmBUSBANAKPDLxKBhDAg0aAG0KEHYBgBIxEIEAIBCIYgCIRhGAZhGIJAAEbCAASQANOYYI4qyWRGjjBNFvhCJPvYSwrmGOM7jQJiABEwDIEQjAo1cD+CkRA69BD+EQAAggCMX/QgEgAhJDoM9w0AhJEQiDjX3Ydu71VQf3Yw2b/0VZrl/q/b+68rb/XnbXv//3y/s+F4V/uf727VZzvvgJ8f9u+c1u+4GaPCA2p0+MI7fmGcoMaLg/62f2ZzKV3btm3bPl7btm0bB2u7Z22ryZv0bYqs/dfMJJmk6e8zn/T7/Ub0fwI8k/tsNssRvFF70NYzpogI03ikHLHjcVNS6x15dOy27pTM6+02IvbbfEpuphFwyDZHTjFYb3NI1e184hTDFpW210ZSIO9VWQdsNU0KrbeylXT49sdI4XZ8ePXsuraUElwx+24qpa33rZQzp5dnvMYwxUFLxOcszUtPK8tayzaGaKIl0hGRKAvReSeU4fiVGnWuxA8mVDiHMIqTItotkU7UEhHORHTWUUXNWm2B2sBgHLS0cRciIpG5pCUiPV9DcdDOQBedUcyay9TaPECiiQGEIiK+MauJFDXKQnTB6VNEpm08M88m264vJy3XSDXVBcCKtE05xXLoB9YA0fnHbrind+AO62Q5eRcPh65SZywCvhKYijQAYIY+++ZHANh9y6M1vN1hHoB/SxIpPsAMHlgAzGCynCFGAu4oIRLORvTldz8BwME7bTBl6hb7Q/1j4XL1RGvhRBsDbUn3JWOSg+ir76Hdew+of/2/YKMkTgmBXgqcxgIJR0qcMLNVQiSMXPT51z8o2n9+XbSRvQgWtQ8gSkGUAmgsAGgiAAaIvvg25fclGnmLCJU2AEymxaW75XnN3/818pua7NlARKTjqTbNluzaOdD/2SiNPkwwNNfMp08ffhOpv5WnCwQiIvGQXPkEXnrkFahP3gbglxXKNFCkPxwfP/gGtC/eSVcAuIPOXqo88JVwOIiumu0Br9//UZOu9oDriOjUxUoTKTIsRMDcK4mIrvPw1vtNIrp45YVKEmsGQ3RrM+W5pv7c5cvR08TZOuW6Ju3xFKKfly4Da8K0GECojJV2hn7KeJDjmZso7YEMRKsvUhx8RcDcU0LAiRopE0pHSZQJ9MXmeJf0N3i4KxNduKIR7kcav8dAWxNI5CniopY+Bli0kwmAQLS+lyP9xlfvfScb0TlLGuiKiO+ciIRAEigSeugpIpNWRHyRXi3iO+dEJAEGTnFk6vLLmgZPWTxX7n7MdgDVMvcSsGMYdTE7AO+ZMXzJqgWV/dmby4NxpQCzrykHz0blvvnQJ8VxbVHFL989vxi5m1HVT91YBAuq/LErTIlDxb9234cm3LhG9b9we747nDca512frZ6Hkfn2o5eljW2NUfrqPe8o1r2KUfv0rR8IWVQ8AA==" alt=""></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+            
+          </button>
+          
+          <div class="offcanvas offcanvas-start nav2leftscroll" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="nav2items">
+                <div class="nav2itemleft">
+                    <ul>
+                        <li>HOME</li>
+                        <li>CATEGORY</li>
+                        <li>ARCHIVE</li>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Page
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <strong>Elements</strong> 
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Blog
+                                </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <strong>blog Details</strong> 
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <li>CONTACT</li>
+                    </ul>
+                </div>
+                
+                <div class="nav2itemright"><button type="button" class="btn-close nav2closebutton text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+              
+              
+            
+           
+          </div>
+        </div>
+        </div>
+      </nav>
+      <aside class="aside1"> 
+          <div class="aside1items ">
+              <h1>Charter Yacht
+                The Luxury Of Traveling</h1>
+
+          </div>
+
+      </aside>
+      <aside class="aside2">
+          <div class="aside2items col-11 col-sm-10 col-md-8 col-lg-8 col-xl-9">
+            <div class="kb25">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="kosa">
+                            <div class="kosaleft rounded-start">
+                              <div class="kosaleftitems">
+                                <div class="kosaleftitem1">
+                                  <div class="kosaleftitem1left">
+                                    <img src="https://preview.colorlib.com/theme/ruft/img/author/a1.png" alt="">
+                                  </div>
+                                  <div class="kosaleftitem1right">
+                                    <div class="kosaleftitem1righttop">
+                                      <a class="kosatag1" href="">MARVEL MAISON</a>
+                                    </div>
+                                    <div class="kosaleftitem1rightbottom">
+                                      <span class="spani1">13TH OCT,2018</span>
+                                      <span class="spani2">IMAGE POST</span>
+                                      <span class="spani3">FOOD & TRAVEL</span>
+                                      <span class="spani3">03 COMMENTS</span>
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <div class="kosaleftitem2">
+                                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus dicta culpa nemo et facere obcaecati debitis explicabo, voluptatibus soluta pariatur dolorem. Itaque quo ab dignissimos soluta sequi at delectus explicabo. </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="kosaright rounded-end">
+                              <div class="kosaright2">
+                                <a href="">Read More</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item ">
+                        <div class="kosa">
+                            <div class="kosaleft rounded-start">
+                              <div class="kosaleftitems">
+                                <div class="kosaleftitem1">
+                                  <div class="kosaleftitem1left">
+                                    <img src="https://preview.colorlib.com/theme/ruft/img/author/a1.png" alt="">
+                                  </div>
+                                  <div class="kosaleftitem1right">
+                                    <div class="kosaleftitem1righttop">
+                                      <a class="kosatag2" href="">MARVEL MAISON</a>
+                                    </div>
+                                    <div class="kosaleftitem1rightbottom">
+                                      <span class="spani1">13TH OCT,2018</span>
+                                      <span class="spani2">IMAGE POST</span>
+                                      <span class="spani3">FOOD & TRAVEL</span>
+                                      <span class="spani3">03 COMMENTS</span>
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <div class="kosaleftitem2">
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae odio ut, maiores sunt voluptatem illum praesentium aliquid ducimus laudantium incidunt! Nihil, quasi explicabo? Tempore excepturi perferendis unde earum doloremque ab! </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="kosaright rounded-end">
+                              <div class="kosaright2">
+                                <a href="">Read More</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item ">
+                        <div class="kosa">
+                            <div class="kosaleft rounded-start">
+                              <div class="kosaleftitems">
+                                <div class="kosaleftitem1">
+                                  <div class="kosaleftitem1left">
+                                    <img src="https://preview.colorlib.com/theme/ruft/img/author/a1.png" alt="">
+                                  </div>
+                                  <div class="kosaleftitem1right">
+                                    <div class="kosaleftitem1righttop">
+                                      <a class="kosatag3" href="">MARVEL MAISON</a>
+                                    </div>
+                                    <div class="kosaleftitem1rightbottom">
+                                      <span class="spani1">13TH OCT,2018</span>
+                                      <span class="spani2">IMAGE POST</span>
+                                      <span class="spani3">FOOD & TRAVEL</span>
+                                      <span class="spani3">03 COMMENTS</span>
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <div class="kosaleftitem2">
+                                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, vitae totam! Aliquam ratione quibusdam cumque repellendus vel mollitia ipsam doloremque, nesciunt iusto quod rem est exercitationem eveniet? Officia, maiores quas. </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="kosaright rounded-end">
+                              <div class="kosaright2">
+                                <a href="">Read More</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      
+                   
+                  </div>
+                  <button class="aka1" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="aka2" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+        
+            </div>
+              
+          </div>
+      </aside>
+      <aside class="aside3">
+          <div class="aside3items">
+            
+              <div class="aside3itemleft">
+                <div class="aside3itemsleft1">
+                  <div class="aside3itemlefttop1">
+                    <img class="imgg3" src="https://preview.colorlib.com/theme/ruft/img/posts/xp1.jpg.pagespeed.ic.vaqoNGW5VI.webp" alt="">
+                  </div>
+                 <div class="aside3itemleftmiddle col-11 col-sm-11 col-md-10 col-lg-8 col-xl-8">
+                  <div class="kosaleftitem1">
+                    <div class="kosaleftitem1left">
+                      <img src="https://preview.colorlib.com/theme/ruft/img/author/a1.png" alt="">
+                    </div>
+                    <div class="kosaleftitem1right">
+                      <div class="kosaleftitem1righttop">
+                        <a href="">MARVEL MAISON</a>
+                      </div>
+                      <div class="kosaleftitem1rightbottom">
+                        <span class="spani1">13TH OCT,2018</span>
+                                      <span class="spani2">IMAGE POST</span>
+                                      <span class="spani3">FOOD & TRAVEL</span>
+                                      <span class="spani3">03 COMMENTS</span>
+                      </div>
+                    </div>
+
+                  </div>
+                 </div>
+                 <div class="aside3itemleftbottom">
+                  <h3 class="hh3">It's Hurricane Season But We Are Visiting Hilton Island</h3>
+                  <p class="pp3">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                    <a class="aa3" href="">CONTINUE READING</a>
+                 </div>
+                
+                 </div>
+                <div class="aside3itemsleft2"> 
+                  <div class="aside3itemlefttop2">
+                    <img class="imgg3" src="https://preview.colorlib.com/theme/ruft/img/posts/xp2.jpg.pagespeed.ic.U3_XgwRn-A.webp);
+                    background-size: cover;" alt="">
+                  </div>
+                 <div class="aside3itemleftmiddle col-11 col-sm-11 col-md-10 col-lg-8 col-xl-8">
+                  <div class="kosaleftitem1">
+                    <div class="kosaleftitem1left">
+                      <img src="https://preview.colorlib.com/theme/ruft/img/author/a1.png" alt="">
+                    </div>
+                    <div class="kosaleftitem1right">
+                      <div class="kosaleftitem1righttop">
+                        <a href="">MARVEL MAISON</a>
+                      </div>
+                      <div class="kosaleftitem1rightbottom">
+                        <span class="spani1">13TH OCT,2018</span>
+                                      <span class="spani2">IMAGE POST</span>
+                                      <span class="spani3">FOOD & TRAVEL</span>
+                                      <span class="spani3">03 COMMENTS</span>
+                      </div>
+                    </div>
+
+                  </div>
+                 </div>
+                 <div class="aside3itemleftbottom">
+                  <h3 class="hh3">It's Hurricane Season But We Are Visiting Hilton Island</h3>
+                  <p class="pp3">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                    <a class="aa3" href="">CONTINUE READING</a>
+                 </div>
+
+                </div>
+                <div class="aside3itemsleft3">
+                  <div class="aside3itemlefttop3">
+                    <img class="imgg3" src="https://preview.colorlib.com/theme/ruft/img/posts/xp3.jpg.pagespeed.ic.1k64JG-FkD.webp" alt="">
+                  </div>
+                 <div class="aside3itemleftmiddle col-11 col-sm-11 col-md-10 col-lg-8 col-xl-8">
+                  <div class="kosaleftitem1">
+                    <div class="kosaleftitem1left">
+                      <img src="https://preview.colorlib.com/theme/ruft/img/author/a1.png" alt="">
+                    </div>
+                    <div class="kosaleftitem1right">
+                      <div class="kosaleftitem1righttop">
+                        <a  href="">MARVEL MAISON</a>
+                      </div>
+                      <div class="kosaleftitem1rightbottom">
+                        <span class="spani1">13TH OCT,2018</span>
+                                      <span class="spani2">IMAGE POST</span>
+                                      <span class="spani3">FOOD & TRAVEL</span>
+                                      <span class="spani3">03 COMMENTS</span>
+                      </div>
+                    </div>
+
+                  </div>
+                 </div>
+                 <div class="aside3itemleftbottom">
+                  <h3 class="hh3">It's Hurricane Season But We Are Visiting Hilton Island</h3>
+                  <p class="pp3">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                    <a class="aa3" href="">CONTINUE READING</a>
+                 </div>
+
+                </div>
+                
+                
+                
+                
+
+              </div>
+
+              
+              <div class="aside3itemright">
+                <div class="aside3itemright1">
+                  <div class="dvd1 col-10  col-lg-10 col-xl-10">
+                    <input class="inp1" type="text" placeholder="SEARCH POSTS">
+                    <button class="dvdbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                </div>
+                <div class="aside3itemright2">
+                  <div class="card col-10 col-lg-10 col-xl-10" >
+                    <img src="https://preview.colorlib.com/theme/ruft/img/blog/xuser2.png.pagespeed.ic.IpFllDl7DZ.webp" class="card-img-top col-10  col-lg-3 col-xl-3" alt="...">
+                    <div class="card-body">
+                        <h4>Charlie Alison Barber</h4>
+                        <p>SENIOR BLOG WRITER</p>
+                        <p class="card-text">Boot camps have its supporters andit sdetractors. Some people do not understand why you should have to spend money on boot camp whenyou can get. Boot camps have itssuppor ters andits detractors.</p>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-basketball"></i>
+                        <i class="fa-brands fa-behance"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="aside3itemright3">
+                  <div class="popular col-10 col-lg-10 col-xl-10">
+                    <div class="populartop">
+                      <div class="populartop1"></div>
+                      <div class="populartop2">
+                        <h3>Popular Posts</h3>
+                      </div>
+                    </div>
+                    <div class="popularbottom">
+                      <div class="popularbottom1">
+                        <div class="popularbottom1left">
+                          <img src="https://preview.colorlib.com/theme/ruft/img/blog/xr1.jpg.pagespeed.ic.3Lc84qdHyV.webp" alt="">
+                        </div>
+                        <div class="popularbottom1right">
+                          <h4 class="hh4">Space Final Frontier</h4>
+                          <p class="pp4">02 HOURS AGO</p>
+                        </div>
+              
+                      </div>
+                      <div class="popularbottom1">
+                        <div class="popularbottom1left">
+                          <img src="data:image/webp;base64,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" alt="">
+                        </div>
+                        <div class="popularbottom1right">
+                          <h4 class="hh4">Space Final Frontier</h4>
+                          <p class="pp4">02 HOURS AGO</p>
+                        </div>
+              
+                      </div>
+                      <div class="popularbottom1">
+                        <div class="popularbottom1left">
+                          <img src="data:image/webp;base64,UklGRrAFAABXRUJQVlA4IKQFAABwFwCdASpkADwAPm0yk0ckIyGhqTQMAIANiWcAzaXMiVpZe1Hl5VOb+fwfT+nGqsqa15CdQXpesx3P4eioum4WO3F7u8YbfJdSzYaW7qkDe4NUiYBK6RC7oVZXIrmBTmB3OC3UhZhNGxEm74gyCYobexw0VQPCj6yF/m6o4bKQGi2ET+fb8BZ8vl8YJxYiplQePbx8LcEFDTGnN4Xv5/CBqJaFOabHL1+s1ELTpKq/97MU3plVD6oc+VHnGmvxjuggx1rgAP78c17v1mvuztFpjj/XFzZERFH913qDTz4tJZ+IOOaNBvGpwL9ImKSnu+Axs6KFwW5Sq5sqCS4+/4Ol7jmyIjiyxhP2JTw4EinnrrzIitWCU2VOiP7pd7L3d69KYgzwNeGWRjzH//dNCOqjbnYcFbYOpyaPccLGKXBT4B4796pWbIkVaY6v8LaXXdu+pucciHT2EZPsRRkgeGNBgr8WGRiad0MscKI9WvLA+4LtAGc4ElkDyexpwuEyK4rP/DSdvPIyBh95oz9Owq5tdHvnl9uAFkA6/TC5IGOIV5vV/9Lwi4XEnZ5Kwidw16TFJRTwvUOd+YNx7iBJlVNiBWUI9sZ2cJ78QwuzL3egccMp8pukGbXhATHuUGx7jup2CAKLLSu7pH6Y+mW3aH2a9QdWuCLFeqdUSgRJkzaANPMcqBb9ihWyFSfPu+9WbILysf93Kz3726+efAP0KjQhOMCNEZ2GzemynK7w6yg6ag1CQmvIhJ7PuIuB0ysLha6bDC3bJ2XXVcbPe+Zhzm+/24ECo3COvtd8dFEUDLAjMupN+h9Xq8EA4bY8lF0bASClFTPYC4hn8rtHyXOItaSCABU6IeFdb+hOtfQLHtUW3UBdCzqDYj2h0iAcplQKLPJrS7CzcHj5VS+LTtKflvsJ0K7DM9WZpE4AYw6767ojZ5xwtkOa6YZJciVDo9aTeMW+o++nghHo4zKt9l6aIXOaoDsfBnA9ZthizlZwf0hew6V02Xr1Or7SXmwp9GOxHWyp7SSBcRP75puPhEtYzFM2d/ytQtReGpMY1RKOB1pPY3MKRWP6iE1df4CBnURZej3dzF2SGt2N8iDC3wv1DyeL3X8xpJjP+zn6BOM4XJofBdAB1Q3qEspKUGScKvND9RPHLpVbjJoCdYZJLDne7d7FjFQrvymqePIutVRS8abq66lzMO5ZzpDv7wM+Iw+/o9WAYaTrw1DrCsS2jTFqZd2ShDeOefgtCRbG2U3BmQSs7bJ3PJW9QRlr2q04CIjHsL9x4cSWnAP04ZNJeJs2WUga6/4oN++6Tuo+p7sM+UPIoCq50T1GG0/phmMjiN9Wm9tavj8kNW0GGLoncZ1dWi57F5gWO7soxjojOoD4HVgAEUCJvNd1Vnc+RdHHK8bin81WBJqYIZ3ytNUMHe+/s44SxwLY+0YDMCcPqyWFb4dmF5UqtKOCteq5vFO7xdDnqMY2nwBBItVQxtVqcvAbCTNq3Hg5i79yw5z7Kux8Jw23AN2T9mdl8lQANf7hDXXC0tWjN5+p16LPCg11sHbUyiqE1/qtRlA/7SllCEin3J67332jM36PFR6UJgsolSWQM83MTT166gPPoIpVk5oPzAXHDfR1ZKsyAuwZEUVtsqpvFLJwwz0nIADFW3XEOjnDX2srivfV8NwDAf567Xau6dJYn+1DOOhgGdRhN7OWPDX1P1lU2ExCbrfSjc3wDpNmM3MKfHl0g7oMxENxkGvXnmrcitK43ePEhpIJoSP1OSjNEPouNgJK5g/cNRzXEHo8ygZs8HnGmz32v0MwgjYQioE3Q/6m/rtfECgItRYEVk4nPmYpuIG5dxOCBAI+FjPNv8KTdxq6Cf2I53iz/QnoB36QkEr7TsIlcUDae/6D7iu6V9OarlHX+Mb4fsGW3yDNVb0IoYAA" alt="">
+                        </div>
+                        <div class="popularbottom1right">
+                          <h4 class="hh4">Space Final Frontier</h4>
+                          <p class="pp4">02 HOURS AGO</p>
+                        </div>
+              
+                      </div>
+                      <div class="popularbottom1">
+                        <div class="popularbottom1left">
+                          <img src="data:image/webp;base64,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" alt="">
+                        </div>
+                        <div class="popularbottom1right">
+                          <h4 class="hh4">Space Final Frontier</h4>
+                          <p class="pp4">02 HOURS AGO</p>
+                        </div>
+              
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="aside3itemright4">
+                  <div class="postcat col-10  col-lg-10 col-xl-10">
+                    <div class="postcattop">
+                      <div class="postcattop1"></div>
+                      <div class="postcattop2"><h3>Post Categories</h3></div>
+                    </div>
+                    <div class="postcatbottom">
+                      <div class="postcatbottom1">
+                        <div class="postcatbottom1left"><p>Technology</p></div>
+                        <div class="postcatbottom1middle"><p>------------------</p></div>
+                        <div class="postcatbottom1right"><p>37</p></div>
+                      </div>
+                      <div class="postcatbottom1">
+                        <div class="postcatbottom1left"><p>Technology</p></div>
+                        <div class="postcatbottom1middle"><p>------------------</p></div>
+                        <div class="postcatbottom1right"><p>37</p></div>
+                      </div>
+                      <div class="postcatbottom1">
+                        <div class="postcatbottom1left"><p>Technology</p></div>
+                        <div class="postcatbottom1middle"><p>------------------</p></div>
+                        <div class="postcatbottom1right"><p>37</p></div>
+                      </div>
+                      <div class="postcatbottom1">
+                        <div class="postcatbottom1left"><p>Technology</p></div>
+                        <div class="postcatbottom1middle"><p>------------------</p></div>
+                        <div class="postcatbottom1right"><p>37</p></div>
+                      </div>
+                      <div class="postcatbottom1">
+                        <div class="postcatbottom1left"><p>Technology</p></div>
+                        <div class="postcatbottom1middle"><p>------------------</p></div>
+                        <div class="postcatbottom1right"><p>37</p></div>
+                      </div>
+                      <div class="postcatbottom1">
+                        <div class="postcatbottom1left"><p>Technology</p></div>
+                        <div class="postcatbottom1middle"><p>------------------</p></div>
+                        <div class="postcatbottom1right"><p>37</p></div>
+                      </div>
+                      <div class="postcatbottom1">
+                        <div class="postcatbottom1left"><p>Technology</p></div>
+                        <div class="postcatbottom1middle"><p>------------------</p></div>
+                        <div class="postcatbottom1right"><p>37</p></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="aside3itemright5">
+                  <div class="newset col-10  col-lg-10 col-xl-10">
+                    <div class="newsettler">
+                      <div class="cube"></div>
+                      <h4 class="newh4">NewSettler</h4>
+                  </div>
+                  <div class="inp">
+                      <div class="em">
+                      <input class="emailinp" type="text" placeholder="Email Address">
+                  </div>
+                  <div class="but">
+                      <button class="subsbtn">SUBSCRIBE NOW</button>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              
+            
+          </div>
+          
+
+      </aside>
+      <footer>
+          <div class="footeritems">
+              <div class="footeritemtop">
+                  <div class="footeritemtop1">
+                      <div class="footeritemtop1up"><h4>About Us</h4></div>
+                      <div class="footeritemtop1bottom">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                      </div>
+                  </div>
+                  <div class="footeritemtop2">
+                      <h4>Newsletter</h4>
+                      <p>Stay updated with our latest trends</p>
+                      <input type="text" placeholder="Email Adress">
+                      <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="footeritemtop3">
+                      <div class="footeritemtop3up"><h4>Instagram Feed</h4></div>
+                      <div class="footeritemtop3bottom">
+                          <img src="https://preview.colorlib.com/theme/ruft/img/xi1.jpg.pagespeed.ic.kIbtyiFKGD.webp" alt="">
+                          <img src="data:image/webp;base64,UklGRkIFAABXRUJQVlA4IDYFAACwEwCdASo6ADoAPm0qk0akIiGhLBgLMIANiWoAnTM5ANSE7I2pY0MMPbtc+649HcliR58QbDhupjvt+M6bDot6AUA6qWGm+UBNNOAWClLspTxsJnFRnH+43IcBeWKIHwLRCkOLT9l0vTIJ1RRqAItIyW2fnOG5m0d4VHGqCsQzwRWtAa0YhxwMCQjM+no9LuXge19hwVAnfCJguiKfqkkREb7GI1gAANXJEIk6UGCnCSE8KQp9ZRERqh77iPy32m2NLXj2tS0Sfl9cLGKVvzhYixd9acJqG/p9LuztaAguFgFe2i1878MBDGch7/83A6BSnT2c7vzNm81mx+t988/C20tfL5pxvsbM3kIFtOSGiS76mX5vo+HJ7CiIbEqojnVaj9PyDOwXGi0H8LGx3JaNVtXTLI4js3bl17hM8unQo+lQnO1N8tIc2BKwXGzYcUXLUXE4/C9Wv/4tYASywHZyFffO9a1ZDrH/M7WJPpr0nKm41goEq+NZoHewFwxUgtLLcpOqMfY5EkMp18CR5FIlAENKBc4KVMbg3cIc+F5qJnaGDNyWVrXHeXySsWW5YBXhpl+lzd58dLOU63t8Vqrn57aear+OvDEzwmA+P2lYP56nstR7+lk05oVWLNy667Em1+HB2VkwHb0JeMvOwX6DKAr77Hd3PWRc8tZ44kxas356qF2U0CkMK+02imRWO2YWFHZRVT1XMc9vKZAtXUnc+6GmQ00hlEjd5J/TvR9PdRN4d3YL+koDyfCg/ZNvApHycgikKrohyKerBqTCt4a7k4Kd7eJwH/zXnpqjrgvYlN3IXLzt2k696GzXP0hlV5r3E5U0jbsdjmJkjxdfDXRFnx7zJE98/w+tNSEj9usAi4J5OomzR8eKf8oNAyJdDkHtrGHzofmlApDp1vwLls/q1z9j1vePHbRkpi7q7iLIZdsa6OgzKS0848FGMiL3GdT4rj3GSKZYfm/eAZMt+Ng0P8HnJ2Q5do40BTYJz6raX/xwTo4ZASR2TYSivDuCuUl4V/gX1egwmh/qxcfpIu+61zeePEQLDMhXC21q5e+SEPSthmivqaCfMJe0BDmL4J3y57+yiBuMrxf1Re2b5M3/cj58TcRGxZhmaZLlWbQE5dWM5/eAdWLsqX53bocwaQzonyImr8MI4XrYZewO7KT9tmRP6KMSjqO79+MAP11e0XBDDnnBkOr3ncn3oWla2dRR4ilnQlVo9ODi4WRb3+4A+/iKXX+no0/zS1Xt/sQJhJNWh9h9MHNgcbF9Llffq7aB8GndQvKps0nswNV+X8bLUkP0bN+sW5VPM83ekePWUQtKO/xSnWKWF+RRQYmMwXlUEoGwagII7cFQ7bQGhVsawko/OBScQQN3P4vBaHJjX3HSMtYl6eK69dpquQmXVlvMAeccBUqFwNWlPTiaOr/JsINSpeOBTkiHdFhO/nKfAB0Vqf40PLPwaGkeANoAvS2qxLPC7HaZOIzgbf7F9HU8rg2wdIA76e6bfYwUg7PBHEcsn2kxfDee83wzJg+AihNjG5ZVnPyxBA+XhtbXw49JjoaSd0drgQJhbu6DRFLGRlltUp28EHVWnAINVRh4+AeajAD8m7jmeBUIA/CH+oscVG+cFmxzML/LBMVGUKd1xb4Rm1ZsIwOP4XVAz7qQZC2kqSDzdC+45hESe5gSefn4fHyFMkKwJPa0Mh29IKp8QYa5ehXsoaXNRI+4j/SdBcaj0W5z4X9eR9svRHG2gru+mw5iN4ZyONIUFDQVSo9fYIojUYYAAA==" alt="">
+                          <img src="data:image/webp;base64,UklGRgoDAABXRUJQVlA4IP4CAAAQDgCdASo6ADoAPm0yk0ckIyGhKBgMAIANiUAZ+ms6KdBoZBhZ1HGqrsZb+mhmk+Vjrw/ppQN3pdrdyLQFVSqtCG96hVj0bi0GUDlSAmFuTorLCOAAnpx8sOgtYJj5W8Xn2JjB2iCtT7psdunsjdh6Kplg9PSQUiKgAP79wLcXKOLtTbPMC380tteqs255zy9gS6a0b/Jf0k5EA2D4FnHfd7Z1tXiq4Zkn7BdYGVMjY8Z0QMcTjsQCmuhoHq8X8PXcE9Zm2U82Kn3AelFHnQ5pfLqqdXSldnBT5WjEej8tJngCy7KZNf0OFGvN321JGwa+kBCL+TxeW0t9WEXBPqc+2JH4orfpTnvPLodukue1jJD3b+PCKpA+qIUVHz1FaKzd2Ps56YlsL/vgjOqhTrdz8m+vuJwSLcpyur1UoYtIXbY+N6U6rt7q/c2X1yTHe5mSsFH1Rx1fcl7IN9EaljYAh0IZvmomHV0LnBevMWwtOtThXEZb1mCJDNLVAnJQJsWJ0EjbVh+2yYvg0vM2/dBO7SoMslxWlsd3gozj9tq/xT+EI2+GUUEQM8nSY2X4P8DOYxEn8MnCC8quUPMaP14kRHxneIsySE9IDqgjVKGcWi/UErZ1N4NgXpenTXSbNsPq/dluEHgco4OGCua6JVFfgHbZa9oODk04HPs13zGoKaFF9MNP+XMLIYqcrQnoxlhQPAOjGEkecuzFbWDydwfI10dipg84zOTp0RKO5Rr1qdSQSoto4saBFTZRUOPCFye4nBT4lyZNZ+SIoPWUy6wkZQ7x9+pX6mdRit3L/lvvS4unoOi/vBv9LH84Ye+S0nwCp1tqt0LrOLfa7pO2/PC8KZpqq5P1FsY68cWwHr7Rzm/DXiljx68sdEtpjLB/iAvQJG4wPrHErnAcyzjXuBSQWIfdLatuny7rvzm37/HpaJcsBgXvQhkAqHPCW/DGv+dwql3DBL0YLerCCULlxsAgGssPBbG53Voh+ngizEu5VyxX8Zvh7r+x9DiBiegA" alt="">
+                          <img src="data:image/webp;base64,UklGRpYCAABXRUJQVlA4IIoCAADQDACdASo6ADoAPmkoj0WkIqEb+1QAQAaEoAuNuSAZy8JTD8YH7yzKz+I45uPPV0+j5wIXqr0a1Bb57pJVnUr8P/JUY2t5Xb2z7SRLWez6KY8hXIfGp9Aw/dBaoyNfVG6oMVtb2PUVZTvzoaZIpfwA2Fal96CSvC2Y/+cb8P/Zdv/TDjnb41dDqQxPg88M5uejdVOZVpRQveh8057Pig9IIsA2EN+nAX9+C/UT2vstS0ut/upKdTGp03VAh7fGCumHf1pMHWcaM7CQEPbg9s/xXdPF1FCXB0QU/9yoP/J9cxrdV1ethGAzQE1n/UrgSrlGxrZWNLp+TTL0UoYoQyQcwVaxpQZtbI4Fq+KbYgaEIhpfyivxi0X38QntaYgB54dgx11zlxHaKUBKbEUQbJI5tl5O8W4TFIj/ss5ZAwxzHhPaFCofAI0HRcWKR/6y/WCTHtkYfuzvksJeArbJ91SkSESptvru5IP6Cdejih3pDCb3lp3UptZmB2npDuJ39YtNojZcAvLZqRC7bKmwmqowL+OhqOzjvKlx9+tJpjPitN0+6JAuxKrN8rWundyP+qdpEdGmDhzkNH1rXP4dAXMWS8pDA1Z7Nvr1xSum80UWlkzearzjOYbkxp4Uc0T85NimDl89CcaDcBYarJDW3hMhVUfU2T3nGWq3db21Jm8N5P9FksGrPyCKltTJOm8Rn29dvX0sjghiDtzrq0OHv5Zyd3VpYTqNG34KxC7usodzQj/PSpFDmeX8Dsz9HCNGD8qOqZjiyYwpAumv69BrClpZdaPH1CB3L2w0w1MAeVAS4yP6LMxfMnhn2r9/n4kTUQxmsCNMe2/hLnPBvsRtMLpACUM+OUShi2AAAA==" alt="">
+                          <img src="data:image/webp;base64,UklGRrQCAABXRUJQVlA4IKgCAADwDACdASo6ADoAPm0skkWkIqGYCgZ8QAbEsYBgD9wA4dgMhQhkhz0+orV5KSBF0BGBhvZWBxTXZuQeRED1lruiB5ouUyuqEmw747e2U8Whm0Ny1n4d4FNs2npc26pQLTDxhWienC8sdief3Qe2WjAAAP7Sv7n7JSd0Ebf8Nf/6tNJm7db5M/xhjvGfaPeSlOBdqmWmCOJEotC5/Cum0DzmgE4arYh1IlIxhf5HN0I1eu+ModMI4jUsjQIuF2UjyA84E5ZvbjOP5XpLU8rJiZQZezjNX1HQzkHP++jQ4P5opH/MF2tOYbu2d94/pE8TaPmXaDMn9q9OFWu63S6a98SdTBeBnlpLJ4GyLyFO3aSJXx32i4+kF+9wp/kBfpXeGPwqdQf9sfe8fF1lwb9BFQPuZf3J8hm5t4GYpeWmCcdRur/8PHVHSuLrjz/aA9wt1v/ut/CnKZIIed47+5coL5Ur+vxmYdQtfso/akwF2402+MLAo8eZf1qha82zZLEIC7+pymoFp36UNPrvBpH8aARsF9eIGpyGNGptCjlA9ki4bv082fM9qnJlB0O4Y0Rov/P/9HoGF2ZwwQWhWaGlOxYlKiF2asUm16X8KmUM1uW3M86ygCbou7o0sBrXnT9OCKmRfyikfFdFm2rH4IrsOcWtOu7ZX/7iXvUDZ4JW//JVYGKulbguALr3VFIKEqpvNOskT8R4QGyr8R5luhH7cxs3gVNrkfXJyKOSuzR7px/UYDAFqeWweVC+kllYqG+SMwNDg13zf41aJInU2n3kVanGD4IyTt+Osf2Y55rAG0uEk8g0oitoiZztx3AdAi6O6NDkxql6m/oz4mRSNQRZBZuP1r1wi6FeXXAXB1HmUv4myJ/tdh/xjQ3XrNFdMVdVdFU7YJsRYJYAAA==" alt="">
+                          <img src="data:image/webp;base64,UklGRpACAABXRUJQVlA4IIQCAABQDgCdASo6ADoAPm0wk0ekIqGhKBQMAIANiWIArk+viq4NdjUZ8pqEq/b5vnii9RJ57frtHHZV1D4dxqzPMdZLTfPzRbIjWY89hj2430glLbcmG1C86bJQR7TdFJ7rdtB1ZfAT9CWyx+y0/ucPS+FRJkDknja2iWFvI2AA/vcbVbZey3fkjfoN5CaDJQlSBi/+Ur6ScFedf/5Kfbv4rPpgV+kHq9BBGaCJoKbopaPRP0GJWRYVk+hcFL9PB2nAJ/gwCD3p5FUtbuOjcWLvzgnmsCawTka9Yw6VOsCr609Jle/rSlbfGg8IVGyuYBUBJCl5r7cSIXzcls2lgXnaYBPogphNWoAiGVpgPOz5u7i5PZwjEN8Yg0HMUfLsFVx7FTCR30kPAilX0LbawzOY+A2h/gqM1NH0n59VR3afOotoMJhl5CGGyIjraOBS066Y9Lk0PHv5XAO+Ng7XSWAworTPGjT8W1fX4BJLz0QPGwBGevNz1THP2Mcna/A+kPwXuAgTC+gPcWZZD/UdNZhLz4M3LXGqDTyZp9YoHyYR/NbUoyEBXBuh3lUQP2E1QGUFDawCmHYBv+314JALzqV/YnClBbnIVhlBmMhVNTXWJWru/P9f81xL2t4/n7AcgIEl6Hp45HEe3feAZms4UkB3YSCXWpApuiTeDkPFh/0UfiPDsa7ijFyvTjdJ2vkXqkRt8yh7aEZVnO/uKp9dpSCVyzRUNIrRxJVXdH4N2GeJohuWqJCGmhdrYfBf9KhNUVkyduUNCpeVqB3KsNC2xhTHwPtxL+idYG3uBMiAtfgOXEwDRbESETzm0DUBJV539186WFchfZjM9fR+9mulrNALAktUOm8AAA==" alt="">
+                          <img src="data:image/webp;base64,UklGRkYEAABXRUJQVlA4IDoEAACwEgCdASo6ADoAPm0qkUWkIqGY/HW0QAbEswBOmVU9r+L8zGvtaUKzDg3CrM5WlmjUsu8gcfHvDndYg4NOqk+vZcDBm9Uux42RUNHq/AESE0FSB3I1ZBNid/kiKpgMs2lyXkmvUE52jWX+fFrS2sPN4dfX0QCkuPRbyPOBddnvsZY2Mg/2CClz3tmw8uJer1r50j5V11nqjaw/pHR+oAD+6A6bqFYKOW6zAhXsVmTVCiQKttto1Td9lXRIa2fGefGFayLnMg1FAKo/2qMOEWpaIwnu1zgBNfPY9mZ5lqI79v/4MpMqK2yQgtn1/l9mpFmMD+adwjATFiPBoSH6LV3UVbPD9aFO7eAzBgHl+85DMfVg4L2+mS+zoGXARAbfZE9fu76ek52iYQ/FgXz0om4qser0/BoNtm8VVYhaL/RNMozRCVyEqCnd3mt6cgXt1FlyPk3Lz1fJTdPWAn0WKaA3P4a2Q6L912aG0q+MgqBb0pEGIzibO6/WgyXFY7qf6wH2wsXRrj7zj7W9iHPbpnccumm7VI6sqURd4FHlCTZt22AAakoIsyemxL2F/TJNTNSSb2p12W2X2iUTDJgAsfoa9pOvSp8FB7Z6uule0Ewr5G819HZul1zHfj1eGcJixZE916/Qo2XE2k1jSGgsOiC2VIo0Jspf78CrXb3XDgH4av37amitoifVuLkceErIoKJlAOs/+nQ13lRRSm2ix9cVidKhOEn0wl60VjNmatOobWPrkGWJo89aAi+Wggpn95qRw7zfwgjPRjGrLEZiUC868zBKAdYvwRH3DC3OloWiqVoCbogHw40JYRwZ04cytB417DN+/jPhNPcXIYXRfdE5pHQp1C90ZjsV53wktKV51kTecJR+IhQ1N4PEUYdlhR2Qn7mk/ZquYHl/MpmMU31daHvv5rRteUdvxCgeYGuvDrf0GK7En3+qEfzhuKynuB5wwhgaesbKqjGz4+AKghFdqwg0TJxdU053Hr438RMHKTa3fOHm1C2s8F4ytdEpzhn6dxK7iPwjO93CkyBpeYjYWpFWyV6AEnxcVUdGpitv2quMpzYhaCGVA4c2B8IOjf7X0hg4fG54xkUjG0jVBVV4xEIUPOY34KIuTW+/Ceqs20NX0xpPUn25wSIeeNlKMtrb5jj8YVDyCPzZm6B91Hr74kIIajOOm8+zmlisagLea8nDJypUs7QI5wyNZsvqzieZPQga9vK0Do3rrtZAmRfNR5OwGx4cEyDBoOH9xIm/YX2N1/Mw7oA7Cu7RNpohXZBRNucyVdCgH9udkw2em/K4zx8KGeWEJSDFR+QSvM1xQLMchcJOTgZxkafWLGOUB6wBIt6o26sgz5gnjMRdBxUspfczfQChauHxZv0GdgctkV2uHIbaMqsQVD0gIyvVqombEMDHN6/nntamW1AXCKSfaIkoWlHTZZgAAA==" alt="">
+                          <img src="data:image/webp;base64,UklGRkAEAABXRUJQVlA4IDQEAACwEgCdASo6ADoAPm0ylEekIyIhKBQKqIANiUAXozgap064LcA0Jp8IfG370kh3C/Wr9nxMzDeDOnamm/93zkfUCVSuqiiYupW8pihcbgHYPm+MyyUMZBxndJrCDnAro3w+7LaSgxmC7QOYv3eV6N7pXi7cLCfxQGRdE6Ssn8In3sx4yMELWNygFNsw5pKri3TlBkIDZ5fulaSRB428IAD+/w38hP1mfyWSf9UQ/80XmbW8G/S7y2xvt00vwFp4Cw5jSPjAKtyKr3npv1GLh/0AZyhdjUto6PhqaIi//Y4xw5gi1ZTqLqJ1fu+BHoGRl/Fn5bcyyTeDxIxlv1duYq+QTb36PfpKj17xFwrlehIl8ZpnduTH1lXybBY/U4wV+um4lrBuDriQBvBxW773qWOLwyranXg/fc2PEDfG1r7zUfvN7LCiWGwlrp1FOdzm1OA9RI6YwSKA5gePChaatP4KBfOZoFniEAajGCI00BfxSBiIXFakNYBEcW6+o0p7SYQWfHS5zysGh1GsLZojU+r4DahUxQKDu+qkdti8xuSAIDmGZ9lWDYw7bi4Vw93r5TthE7EngsJuXg2L5JPEW9v0zDm6lj/R4BHh5ztFA31uYejKyGDPEE3OZ0wBkcRh1bxeKL577EmwAvYHcNyKuRglKvHb8q8sXOSImhtVQCRhrYUqNU0kXlfkdlrpC39G5HSjc+rk2GJ8WK+KeHnIPlZpymvVvtJsfwrK9eBmwCKuBJYn8LKDy6/aoB4mJ3MHqSUAx0JksVHiUUK+K3Pn9SRSuasffap5HT5w6o5q/XBh7thPthB3b7iDLWLc1oY71IFYspiM0eDy32JuRtV3jR4DQ+cwtkM9a9bbJD+sOieeQ75SBfjsvI26NeP0wOtWYB33L3VeEsFP5uMdwqVbcKMO3skH0LYEqht0vAmqiu5ftfTfd1LQF4gQPNmU3/X0bXyF435OTBfRWAchBWwRinyP63bp9BZX0QBXJuPLn1V32yvSwBWr9FAjbs+5iXbx3ffnlTAsPb7qeoeN2Niz69jDW3ozZnc3rZbQyLr0fB27kDqO0ScB8xWq/LF3NGGKYqVOmboOv3CP+/uspFX47V+quDG+6FkpKgncGlasedPGaWZ6RrS56v2mJyEwgT0d48ExdU/tq/sF5P1xs1jhEmj6XezPeu1hHvrkkyxg6qoPv9QbTi8Pf1Brju/TVd7zjtjpNNB5UqWaBY/HiWT1GXr04ibd9Pb5OSbqb+23HknOssOe9k/G8EdrNqq4ZZmRIcoBM6Ha7sOwx+HpxHig72YENZmdndV5hzDmQE3oYpsi5EPoz9vdeOEe9minOsKZhTJzQDZqnMvpuy0iK/Enq43lxNXe3jLObSsSAhsecWVvCzsgRWUXhwfxtzrzxaUyGMdWsGNhaxZtvptPnQOnNtdRN4AAAA==" alt="">
+                      </div>
+                  </div>
+                  <div class="footeritemtop4">
+                      <div class="footeritemtop4up"><h4>Follow Us</h4></div>
+                      <div class="footeritemtop4middle">Let us be social</div>
+                      <div class="footeritemtop4bottom">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-balloon"></i>
+                        <i class="bi bi-apple"></i>
+                      </div>
+                  </div>
+
+
+              </div>
+
+              <div class="footeritembottom">
+                  <p>Copyright ©2022 All rights reserved | This template is made with  by</p>
+                  <a href="">Colorlib</a>
+              </div>
+            
+
+
+          </div>
+
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    
+</body>
+<script>
+  let nav1 = document.querySelector(".nav1")
+  window.addEventListener("scroll",function(){
+    console.log(window.scrollY)
+    if(window.scrollY > 200){
+       nav1.style.background = "#8050fa"
+    }
+    else{
+      nav1.style.background = "transparent"
+    }
+  })
+  let nav2 = document.querySelector(".nav2")
+  window.addEventListener("scroll",function(){
+    console.log(window.scrollY)
+    if(window.scrollY > 200){
+       nav2.style.background = "#8050fa"
+    }
+    else{
+      nav2.style.background = "transparent"
+    }
+  })
+</script>
+
+</html>
