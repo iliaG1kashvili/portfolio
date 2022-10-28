@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mian">
+        <img class="img1" src="https://www.dafont.com/forum/attach/orig/6/7/672156.png?1" alt="">
+        <h1 class="myh1">Create your Google Account</h1>
+        <p class="myptag1">Go to Gmail</p>
+        <input class="inp1" type="text" placeholder="name">
+        <input class="inp2" type="text" placeholder="last name">
+        <br>
+        <input class="inp3" type="text" placeholder="username @gmail.com">
+        <p class="myptag2">You can use letters,nubers and dots</p>
+        <input class="inp4" type="password" placeholder="password">
+        <input class="inp5" type="password" placeholder="confirmation">
+        <span class="spani"></span>
+        <p class="myptag3">Use 8 or more characters by combining letters, numbers, and special characters</p>
+        <input class="inp6" id="chkPref" onclick="changeCheckbox()" name="password" type="checkbox" value="human"> <label class="lab1" for="">Show password</label>
+        <br>
+        <a class="myatag1" href="local2.html">Instead, log in</a>
+        <button class="btn1">Next</button>
+        <div class="dvd1">
+            <img class="img2" src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="">
+            <p class="myptag4">One account for everything Google works for you.</p>
+        </div>
+    </div>
+    <div class="atagdiv">
+        <a href="atagdiv.html" class="myatag2">Forgot password</a>
+    </div>
+    
+
+
+
+    <script src="mail.js"></script>
+</body>
+<style>
+    .atagdiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .myatag2{
+        
+        font-family: sans-serif;
+        text-decoration: none;
+        margin-top: 60px;
+        color: #1877f2;
+    }
+    .mian{
+        width: 850px;
+        height: 700px;
+        border: 1px solid #e0e0e0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        padding-left: 20px;
+        font-family: sans-serif;
+        margin-left: 550px;
+        margin-top: 100px;
+    }
+    .img1{
+        width: 80px;
+        margin-top: 20px;
+    }
+    .myh1{
+        font-size: x-large;
+        font-family: sans-serif;
+    }
+    .myptag1{
+        font-size: large;
+        font-family: sans-serif;
+    }
+    .img2{
+        width: 300px;
+        margin-left: 470px;
+        margin-top: -350px;
+    }
+    body{
+        background-color: white;
+    }
+    .inp1{
+        width: 200px;
+        height: 30px;
+        font-family: sans-serif;
+        border-radius: 4px;
+        border-color: #e0e0e0;
+        outline: none;
+        border: 1px solid #e0e0e0;
+           
+    }
+    .inp2{
+        width: 200px;
+        margin-left: 220px;
+        margin-top: -35px;
+        height: 30px;
+        font-family: sans-serif;
+        border-radius: 4px;
+        border: 1px solid #e0e0e0;
+    }
+    .inp3{
+        width: 420px;
+        height: 30px;
+        font-family: sans-serif;
+        margin-top: 20px;
+        border-radius: 4px;
+        border: 1px solid #e0e0e0;
+    }
+    .inp4{
+        width: 200px;
+        height: 30px;
+        font-family: sans-serif;
+        margin-top: 25px;
+        border-radius: 4px;
+        border: 1px solid #e0e0e0;
+    }
+    .inp5{
+        width: 200px;
+        margin-left:220px ;
+        margin-top: -35px;
+        height: 30px;
+        font-family: sans-serif;
+        border-radius: 4px;
+        border: 1px solid #e0e0e0;
+    }
+    .myptag3{
+        width: 370px;
+        font-family: sans-serif;
+        padding-bottom: 40px;
+    }
+    .lab1{
+        margin-left: 30px;
+        margin-top: -15px;
+        font-family: sans-serif;
+    }
+    .btn1{
+        width: 70px;
+        margin-left: 365px;
+        margin-top: -33px;
+        height: 40px;
+        font-family: sans-serif;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        background-color: #1877f2;
+    }
+    .myptag4{
+        margin-left: 470px;
+        margin-top: -20px;
+        font-family: sans-serif;
+        width: 290px;
+        text-align: center;
+    }
+    .myatag1{
+        margin-top: 110px;
+        font-family: sans-serif;
+        text-decoration: none;
+        margin-top: 60px;
+        color: #1877f2;
+    }
+    .dvd1{
+        margin-top: -250px;
+        padding: 20px 20px;
+    }
+
+</style>
+</html>
