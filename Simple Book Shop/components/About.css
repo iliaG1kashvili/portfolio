@@ -1,0 +1,35 @@
+
+
+.AboutPanel{
+    padding-top: 4%;
+    display: block;
+    width: 70%;
+    padding-left: 30%;
+}
+.Intro{
+    padding-left: 32%;
+    padding-bottom: 4%;
+    color: rgb(249,237,237);
+    background-color: rgb(63,65,141);
+    padding-top: 3%;
+    
+}
+.Panel{
+    border: 3px solid rgb(219, 215, 215);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background-color: beige;
+}
+.Text1{
+    margin: 10px;
+    padding: 10px;
+}
+
+.AboutPanel{
+    padding-bottom: 20px;
+}
+.Page{
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

@@ -1,0 +1,182 @@
+[
+    {
+        "title": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "genre": "Fiction",
+        "year_of_release": 2011,
+        "average_price": "$15.99",
+        "description": "A magical circus and dueling magicians. Morgenstern's debut novel is enchanting and mesmerizing.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEftuMPtLrmeHO4xb8mj25-KpSVCLwG9D22w&s"        
+    },
+    {
+        "title": "The Goldfinch",
+        "author": "Donna Tartt",
+        "genre": "Fiction",
+        "year_of_release": 2013,
+        "average_price": "$14.99",
+        "description": "Theo Decker's life changes after surviving an explosion. Tartt won a Pulitzer for this novel.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqB1D88Cop4cDXACBT4ECs8B3O0ERlwphSvw&s"
+    },
+    {
+        "title": "Normal People",
+        "author": "Sally Rooney",
+        "genre": "Fiction",
+        "year_of_release": 2018,
+        "average_price": "$13.99",
+        "description": "Explores the intricate relationship between Marianne and Connell. Rooney's contemporary love story.",
+        "image": "https://static.faber.co.uk/wp-content/uploads/2021/09/Normal-People-1-437x690.jpg"
+    },
+    {
+        "title": "Pachinko",
+        "author": "Min Jin Lee",
+        "genre": "Fiction",
+        "year_of_release": 2017,
+        "average_price": "$16.99",
+        "description": "Multi-generational saga of a Korean family in Japan. Lee's novel is a poignant historical epic.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1529845599i/34051011.jpg"
+    },
+    {
+        "title": "Gone Girl",
+        "author": "Gillian Flynn",
+        "genre": "Mystery and Suspense",
+        "year_of_release": 2012,
+        "average_price": "$12.99",
+        "description": "A wife's disappearance turns sinister. Flynn's psychological thriller keeps readers on edge.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554086139i/19288043.jpg"
+    },
+    {
+        "title": "The Girl with the Dragon Tattoo",
+        "author": "Stieg Larsson",
+        "genre": "Mystery and Suspense",
+        "year_of_release": 2005,
+        "average_price": "$14.99",
+        "description": "Journalist and hacker delve into dark family secrets. Larsson's gripping mystery.",
+        "image": "https://m.media-amazon.com/images/I/71iRlEl1h0L._SY466_.jpg"
+    },
+    {
+        "title": "Big Little Lies",
+        "author": "Liane Moriarty",
+        "genre": "Mystery and Suspense",
+        "year_of_release": 2014,
+        "average_price": "$10.99",
+        "description": "Friendship and domestic issues with a twist. Moriarty's novel is both suspenseful and insightful.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1559835163i/33516773.jpg"
+    },
+    {
+        "title": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "genre": "Mystery and Suspense",
+        "year_of_release": 2019,
+        "average_price": "$16.99",
+        "description": "A woman accused of murder stops speaking. Michaelides' psychological thriller is compelling.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668782119i/40097951.jpg"
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "genre": "Romance",
+        "year_of_release": 1813,
+        "average_price": "$9.99",
+        "description": "Elizabeth Bennet and Mr. Darcy's love story. Austen's classic romance.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320399351i/1885.jpg"
+    },
+    {
+        "title": "Me Before You",
+        "author": "Jojo Moyes",
+        "genre": "Romance",
+        "year_of_release": 2012,
+        "average_price": "$12.99",
+        "description": "A caregiver and a paralyzed man form a bond. Moyes' touching love story.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1665087720i/17347634.jpg"
+    },
+    {
+        "title": "The Notebook",
+        "author": "Nicholas Sparks",
+        "genre": "Romance",
+        "year_of_release": 1996,
+        "average_price": "$8.99",
+        "description": "Enduring love between Noah and Allie. Sparks' heartfelt romance spans decades.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483183484i/33648131.jpg"
+    },
+    {
+        "title": "Outlander",
+        "author": "Diana Gabaldon",
+        "genre": "Romance",
+        "year_of_release": 1991,
+        "average_price": "$15.99",
+        "description": "Time-traveling nurse in 18th-century Scotland. Gabaldon's historical romance.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1659086907i/10964.jpg"
+    },
+    {
+        "title": "The Name of the Wind",
+        "author": "Patrick Rothfuss",
+        "genre": "Fantasy and Sci-Fi",
+        "year_of_release": 2007,
+        "average_price": "$14.99",
+        "description": "The legendary Kvothe's adventures. Rothfuss' epic fantasy.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1704917687i/186074.jpg"
+    },
+    {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "genre": "Fantasy and Sci-Fi",
+        "year_of_release": 1965,
+        "average_price": "$10.99",
+        "description": "Desert planet politics and religion. Herbert's sci-fi classic.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg"
+    },
+    {
+        "title": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "genre": "Fantasy and Sci-Fi",
+        "year_of_release": 2008,
+        "average_price": "$12.99",
+        "description": "Katniss Everdeen in a deadly competition. Collins' dystopian sci-fi.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052.jpg"
+    },
+    {
+        "title": "Good Omens",
+        "author": "Neil Gaiman and Terry Pratchett",
+        "genre": "Fantasy and Sci-Fi",
+        "year_of_release": 1990,
+        "average_price": "$11.99",
+        "description": "Angel and demon team up to stop apocalypse. Gaiman and Pratchett's comedic fantasy.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1615552073i/12067.jpg"
+    },
+    {
+        "title": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "genre": "Non-Fiction",
+        "year_of_release": 2011,
+        "average_price": "$18.99",
+        "description": "Explores Homo sapiens' impact on the world. Harari's historical analysis.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1703329310i/23692271.jpg"
+    },
+    {
+        "title": "Educated",
+        "author": "Tara Westover",
+        "genre": "Non-Fiction",
+        "year_of_release": 2018,
+        "average_price": "$13.99",
+        "description": "Memoir of a woman escaping her strict upbringing. Westover's inspiring story.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1506026635i/35133922.jpg"
+    },
+    {
+        "title": "Becoming",
+        "author": "Michelle Obama",
+        "genre": "Non-Fiction",
+        "year_of_release": 2018,
+        "average_price": "$19.99",
+        "description": "Memoir of the former First Lady of the US. Obama's impactful narrative.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528206996i/38746485.jpg"
+    },
+    {
+        "title": "The Immortal Life of Henrietta Lacks",
+        "author": "Rebecca Skloot",
+        "genre": "Non-Fiction",
+        "year_of_release": 2010,
+        "average_price": "$15.99",
+        "description": "Henrietta Lacks' cells revolutionized medicine. Skloot's investigative biography.",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327878144i/6493208.jpg"
+    }
+]

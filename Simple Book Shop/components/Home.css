@@ -1,0 +1,35 @@
+input.placeholder {
+    text-align: center;
+}
+.MainImg{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 100px;
+    /* box-shadow: 5px 5px rgba(0, 0, 0, 0.367); */
+    border-radius: 15px;
+}
+.WelcomTxt{
+    margin-left: 35%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.368);
+    border-radius: 10px;
+    padding-right: 20%;
+    background-image: url("https://img.freepik.com/premium-photo/colorful-chaotic-pattern-textile-design_839035-702493.jpg?w=996");
+    padding-left: 10%;
+}
+.textf{
+    font-size:xx-large;
+    color: aliceblue;
+}
+.MainText{
+    background-color: rgba(158, 165, 170, 0.84);
+    font-size: xx-large;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.mtext{
+    color: black;
+}
